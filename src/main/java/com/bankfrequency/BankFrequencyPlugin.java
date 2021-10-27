@@ -1,4 +1,4 @@
-package com.example;
+package com.bankfrequency;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -14,15 +14,15 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Bank Frequency"
 )
-public class ExamplePlugin extends Plugin
+public class BankFrequencyPlugin extends Plugin
 {
 	@Inject
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private BankFrequencyConfig config;
 
 	@Override
 	protected void startUp() throws Exception
@@ -39,15 +39,16 @@ public class ExamplePlugin extends Plugin
 	@Subscribe
 	public void onGameStateChanged(GameStateChanged gameStateChanged)
 	{
+		/*
 		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
 		{
 			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
-		}
+		}*/
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+    BankFrequencyConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(BankFrequencyConfig.class);
 	}
 }

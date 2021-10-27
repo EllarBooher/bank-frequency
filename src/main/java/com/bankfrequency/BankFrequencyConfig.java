@@ -1,12 +1,13 @@
-package com.example;
+package com.bankfrequency;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
-public interface ExampleConfig extends Config
+@ConfigGroup("bankfrequency")
+public interface BankFrequencyConfig extends Config
 {
+	/*
 	@ConfigItem(
 		keyName = "greeting",
 		name = "Welcome Greeting",
@@ -16,4 +17,5 @@ public interface ExampleConfig extends Config
 	{
 		return "Hello";
 	}
+	*/
 }
